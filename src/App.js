@@ -1,9 +1,8 @@
 import React from 'react';
-import TalhaRizwat from './java1';
 
 function App() {
   return (
-      <TalhaRizwat/>
+      <h1>Your Work Here!</h1>
   );
 }
 
