@@ -1,0 +1,25 @@
+p{
+    color: #fff;
+    font-size: 16px;
+}
+
+#email_field{
+
+    width: 150px;
+    height: 30px;
+
+}
+
+#fb_icon{
+    color: #fff;
+}
+
+#fb_icon:hover{
+    color: #000;
+    transition: 500ms;
+}
+#email_input{
+    border: transparent;
+    border-radius: 5px;
+    height: 35px;
+}
