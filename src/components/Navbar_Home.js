@@ -70,6 +70,19 @@ const Navbar_Home = props => {
                             <input type="text" value="" placeholder="Regular" className="form-control"/>
                         </div>
                     </div>
+                    <a className="nav-link " href="#" id="navbarDropdownMenuLink"
+                       data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <i className="material-icons">
+                            location_on
+                        </i>
+                        <b>Location  </b>
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a className="dropdown-item" href="#">Danish 5</a>
+                        <a className="dropdown-item" href="#">Danish 6</a>
+                        <a className="dropdown-item" href="#">Danish 7</a>
+                        <a className="dropdown-item" href="#">Danish 8</a>
+                    </div>
                 </div>
             </div>
         </div>
