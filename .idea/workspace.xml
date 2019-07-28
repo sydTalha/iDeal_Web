@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e0f2d47-1aa2-4a00-a200-2136f470308c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/homepage/footer/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/homepage/footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/material-kit.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-kit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Page/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="171">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -211,16 +206,37 @@
       <workItem from="1562599183894" duration="747000" />
       <workItem from="1562657775460" duration="1105000" />
       <workItem from="1564306086944" duration="5330000" />
-      <workItem from="1564323273247" duration="329000" />
+      <workItem from="1564323273247" duration="571000" />
     </task>
+    <task id="LOCAL-00001" summary="Allah kry ho jaye">
+      <created>1564323682885</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564323682885</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Allah kry ho jaye">
+      <created>1564323736344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564323736344</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Allah kry ho jaye">
+      <created>1564323795277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564323795277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14847000" />
+    <option name="totallyTimeSpent" value="15089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20026438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -245,6 +261,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Allah kry ho jaye" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allah kry ho jaye" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/java1.js" />
@@ -317,8 +337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Page/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="171">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
