@@ -1,0 +1,4 @@
+.city:hover {
+    fill: #1D8348;
+    transition: 600ms;
+}

@@ -3,12 +3,7 @@ p{
     font-size: 16px;
 }
 
-#email_field{
 
-    width: 150px;
-    height: 30px;
-
-}
 
 #fb_icon{
     color: #fff;
@@ -19,7 +14,11 @@ p{
     transition: 500ms;
 }
 #email_input{
-    border: transparent;
-    border-radius: 5px;
+    border: 0px solid transparent;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
     height: 35px;
+}
+i{
+    margin-left: 8px;
 }
