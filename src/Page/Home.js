@@ -4,7 +4,10 @@ import Navbar_Home from "../components/Navbar_Home";
 class Home extends Component {
     render() {
         return (
-            <Navbar_Home/>
+            <div>
+                <Navbar_Home/>
+
+            </div>
         );
     }
 }
