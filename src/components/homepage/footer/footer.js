@@ -8,7 +8,7 @@ class Footer extends Component{
             <footer className="footer bg-info" data-background-color="black">
                 <div className="container">
                     <div className='row'>
-                        <div className='col'>
+                        <div className='col-md-auto'>
                             <p className="font-weight-bold">
                             BE IN TOUCH WITH US:
                             </p>
@@ -19,7 +19,7 @@ class Footer extends Component{
                                 <button className="btn bg-dark">JOIN US</button>
                             </div>
                         </div>
-                        <div className='col'>
+                        <div className='col-md-auto'>
                             <i className="fa fa-facebook" id="fb_icon"></i>
                             <i className="fa fa-twitter" id="fb_icon"></i>
                             <i className="fa fa-google" id="fb_icon"></i>
