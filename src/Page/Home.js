@@ -8,7 +8,7 @@ import './HomeStyle.css';
 class Home extends Component {
     render() {
         return (
-            <div >
+            <div style={pageStyle}>
                 <Navbar_Home />
                 <div className="container">
                     <div className="row">
@@ -28,5 +28,8 @@ class Home extends Component {
         );
     }
 }
-
+const pageStyle={
+    width: "100%",
+    height: "100%"
+};
 export default (Home);
