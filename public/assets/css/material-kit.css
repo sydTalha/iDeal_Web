@@ -16146,7 +16146,7 @@ footer {
   display: -webkit-flex;
   /* Safari */
   /* Safari 6.1+ */
-  display: flex;
+  /*display: flex;*/
 }
 
 footer ul {

@@ -1,32 +1,33 @@
 import React,{ Component } from 'react';
-import Navbar_Home from "../components/Navbar_Home";
 import Map from '../components/Map';
-import Footer from '../components/homepage/footer/footer';
 import './HomeStyle.css';
 
 
 class Home extends Component {
     render() {
         return (
-            <div >
-                <Navbar_Home />
+            <div style={styleHome}>
                 <div className="container">
                     <div className="row">
                         <div className='col'>
                             <h1>Tag-line</h1>
-                            <button type="button" className="btn btn-primary">Find Shop</button>
+                            <button type="button" className="btn btn-success">Find Shop</button>
                             <br/>
-                            <button type="button" className="btn btn-primary">Open Shop</button>
+                            <button type="button" className="btn btn-outline-success">Open Shop</button>
                         </div>
                         <div className='col-md-auto'>
                             <Map/>
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }
 }
+
+const styleHome={
+    width:'100%',
+    height: '90vh'
+};
 
 export default (Home);

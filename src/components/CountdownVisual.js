@@ -54,7 +54,7 @@ const styleBox={
     marginLeft: '3px',
     color: '#FFF',
     textAlign: 'center',
-    borderRadius: '15px',
+    borderRadius: '8px',
     fontWeight: 'Bold',
     backgroundColor: 'rgb(171, 171, 171,0.8)'
 };

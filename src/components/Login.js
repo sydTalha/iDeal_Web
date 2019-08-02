@@ -9,7 +9,7 @@ const Login = () => {
                         <div className="col-lg-4 col-md-6 ml-auto mr-auto">
                             <div className="card card-login">
                                 <form className="form" method="" action="">
-                                    <div className="card-header card-header-info text-center">
+                                    <div className="card-header card-header-success text-center">
                                         <h4 className="card-title">Login</h4>
                                         <div className="social-line">
                                             <a href="#pablo" className="btn btn-just-icon btn-link">
