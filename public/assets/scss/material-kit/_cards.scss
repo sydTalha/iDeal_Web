@@ -1,5 +1,5 @@
 //https://www.google.com/design/spec/components/cards.html#cards-content-blocks
-// Card resting elevation: 2dp
+// CardPerson resting elevation: 2dp
 .card {
   border: 0;
   margin-bottom: 30px;
@@ -84,7 +84,7 @@
   }
 
   &.bmd-card-raised {
-    // Card raised elevation: 8dp
+    // CardPerson raised elevation: 8dp
     @include box-shadow($bmd-shadow-8dp);
   }
 

@@ -109,7 +109,7 @@
   margin-left: -($card-spacer-x / 2);
 }
 
-// Card image
+// CardPerson image
 .card-img-overlay {
   position: absolute;
   top: 0;
@@ -124,7 +124,7 @@
   @include border-radius($card-inner-border-radius);
 }
 
-// Card image caps
+// CardPerson image caps
 .card-img-top {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   @include border-top-radius($card-inner-border-radius);
@@ -136,7 +136,7 @@
 }
 
 
-// Card deck
+// CardPerson deck
 
 .card-deck {
   display: flex;
@@ -165,7 +165,7 @@
 
 
 //
-// Card groups
+// CardPerson groups
 //
 
 .card-group {
