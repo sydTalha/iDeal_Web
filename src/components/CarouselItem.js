@@ -1,15 +1,15 @@
 import React from 'react';
 import {Component} from 'react';
 
-class ItemCarousel extends Component{
+class CarouselItem extends Component{
     render() {
         return(
             <div>
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <div className="carousel-indicators">
                         <img src="../../../assets/img/bg2.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
-                        <img src="../../../assets/img/bg2.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
-                        <img src="../../../assets/img/bg2.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
+                        <img src="../../../assets/img/bg3.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
+                        <img src="../../../assets/img/bg.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
 
                     </div>
                     <div className="carousel-inner">
@@ -48,4 +48,4 @@ const extraImgStyle={
     marginRight: '5px'
 }
 
-export default ItemCarousel;
+export default CarouselItem;

@@ -1,5 +1,5 @@
 // This is a set of flex-based layout containers necessary for components such as the drawer.
-//  It allows for flex based positioning such as sticky header and footer inside an bmd-layout, with a
+//  It allows for flex based positioning such as sticky header and Footer inside an bmd-layout, with a
 //  bmd-layout-content that scrolls.
 
 // mobile webkit smooth scrolling: http://stackoverflow.com/a/15147497/2363935
@@ -16,7 +16,7 @@
 .bmd-layout-container {
   position: relative;
   display: flex;
-  flex-direction: column; // allows for sticky header and footer
+  flex-direction: column; // allows for sticky header and Footer
   width: 100%;
   height: 100%;
   overflow-x: hidden;

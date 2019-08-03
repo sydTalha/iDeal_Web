@@ -1,19 +1,17 @@
 import React,{ Component } from 'react';
-import Map from '../components/Map';
-import './HomeStyle.css';
-
+import Map from '../components/Map/Map';
 
 class Home extends Component {
     render() {
         return (
-            <div style={styleHome}>
+            <div style={homeStyle}>
                 <div className="container">
                     <div className="row">
                         <div className='col'>
-                            <h1>Tag-line</h1>
-                            <button type="button" className="btn btn-success">Find Shop</button>
+                            <h1>The dependable source for medical equipments</h1>
+                            <a  role='button' className="btn btn-success" href='/shops'>Find Shop</a>
                             <br/>
-                            <button type="button" className="btn btn-outline-success">Open Shop</button>
+                            <a  className="btn btn-outline-success">Open Shop</a>
                         </div>
                         <div className='col-md-auto'>
                             <Map/>
@@ -24,10 +22,6 @@ class Home extends Component {
         );
     }
 }
-
-const styleHome={
-    width:'100%',
-    height: '90vh'
+const homeStyle={
 };
-
 export default (Home);

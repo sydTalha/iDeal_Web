@@ -1,0 +1,30 @@
+
+.icon-social{
+    position: relative;
+    color: #fff;
+    top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.heading-footer{
+    color: #fff;
+    position: relative;
+    top:4px;
+}
+.icon-social:hover{
+    color: #1C2833;
+    transition: 500ms;
+}
+#email_input{
+    position: relative;
+    padding-left: 5px;
+    top: 2px;
+    border: 0 solid transparent;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 40px;
+    width: 250px;
+}

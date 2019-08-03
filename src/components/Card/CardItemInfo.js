@@ -1,12 +1,12 @@
 import React from 'react';
-import ItemCarousel from './ItemCarousel';
+import CarouselItem from '../CarouselItem';
 
-const ItemInfoCard = ()=>{
+const CardItemInfo = ()=>{
     return(
 
         <div className="card mb-3">
             <div className="card-img-top">
-                <ItemCarousel/>
+                <CarouselItem/>
             </div>
                 <div className="card-body">
                     <h3 className="card-title">ECG Machine</h3>
@@ -22,4 +22,4 @@ const titleStyle={
     color: '#2879fe'
 };
 
-export default ItemInfoCard;
+export default CardItemInfo;

@@ -3,8 +3,8 @@ import './MapStyle.css';
 
 const Map = () => {
     return(
-        <div className='pk-map'>
-            <svg fill="#2879fe" stroke="#fff"  stroke-linecap="round" stroke-linejoin="round"
+        <div >
+            <svg id='pk-map' fill="#2879fe" stroke="#fff"  stroke-linecap="round" stroke-linejoin="round"
                  stroke-width="6" version="1.2" viewBox="0 0 1000 960"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -50,5 +50,6 @@ const Map = () => {
         </div>
     );
 };
+
 
 export default Map;

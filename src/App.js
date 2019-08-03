@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Home from './Page/Home'
 import Items from './Page/Items';
 import Shops from './Page/Shops';
-import Navbar from './components/Navbar_Home';
+import PersonShop from './Page/PersonShop'
+import ItemDetail from './Page/ItemDetail';
+import NavHome from './components/Navbar/NavbarHome';
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-import Footer from "./components/homepage/footer/footer";
+import Footer from "./components/Footer/footer";
 
 class App extends Component {
 
@@ -19,24 +21,21 @@ class App extends Component {
 
         let hist = createBrowserHistory();
         return (
-            <div>
-                <Navbar/>
+            <div className='index-page'>
+                <NavHome/>
                 <Router history={hist}>
                     <Switch>
                         <Route path="/items" component={Items} />
                         <Route path="/shops" component={Shops} />
+                        <Route path="/detail" component={ItemDetail} />
+                        <Route path="/personShop" component={PersonShop} />
                         <Route path="/" component={Home} />
                     </Switch>
                 </Router>
-                <div style={styleFooter}>
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         );
     }
 }
 
-const styleFooter={
-    marginTop:'0px'
-};
 export default (App)

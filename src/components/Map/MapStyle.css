@@ -1,0 +1,13 @@
+#pk-map{
+    width: 100%;
+}
+.city:hover {
+    fill: #1D8348;
+    transition: 600ms;
+}
+
+@media screen and (min-width: 768px) {
+    #pk-map{
+        width: 480px;
+    }
+}

@@ -56,7 +56,7 @@ const styleBox={
     textAlign: 'center',
     borderRadius: '8px',
     fontWeight: 'Bold',
-    backgroundColor: 'rgb(171, 171, 171,0.8)'
+    backgroundColor: 'rgba(171, 171, 171,0.8)'
 };
 
 export default CountdownVisual;

@@ -1,0 +1,15 @@
+#navbar-position{
+    width: 100%;
+}
+
+#logo-brand{
+    display:none
+}
+
+@media only screen and (min-width: 768px) {
+    #logo-brand{
+        font-family: 'Offside', serif;
+        font-size: 40px;
+        display: block;
+    }
+}
