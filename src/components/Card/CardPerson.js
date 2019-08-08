@@ -18,9 +18,7 @@ const CardPerson=()=>{
 
         </div>
     );
-
-
-}
+};
 const btnStyle={
     width:'100%',
     textAlign:'center'
@@ -31,5 +29,5 @@ const inlineStyle={
     position:'relative',
     top:'5px'
 
-}
+};
 export default CardPerson;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../Login';
 import './navbarStyle.css';
 
 const NavbarHome = () => {
@@ -10,7 +11,7 @@ const NavbarHome = () => {
                     <div>
                         <ul className="nav"  style={areaIconStyle}>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">
+                                <a className="nav-link" data-toggle="tooltip" title="Home" href="/">
                                     <i className="material-icons" style={iconStyle}>
                                         home
                                     </i>
@@ -18,34 +19,40 @@ const NavbarHome = () => {
                             </li>
                             <li className="nav-item" >
                                 <a className="nav-link" href="/items">
-                                    <i className="material-icons" style={iconStyle}>
+                                    <i className="material-icons" data-toggle="tooltip" title="Search" style={iconStyle}>
                                         search
                                     </i>
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    <i className="material-icons" style={iconStyle}>
+                                <a className="nav-link " href="#" id="navbarDropdownMenuLink"
+                                   data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                    <i className="material-icons" data-toggle="tooltip" title="Profile" style={iconStyle}>
                                         account_circle
                                     </i>
                                 </a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a className="dropdown-item" data-toggle="modal" data-target="#loginModal">Login</a>
+                                    <a className="dropdown-item" href='/signup'>Sign up</a>
+                                </div>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link " href="#" id="navbarDropdownMenuLink"
                                    data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                    <i className="material-icons" style={iconStyle}>
+                                    <i className="material-icons" data-toggle="tooltip" title="Setting" style={iconStyle}>
                                         settings
                                     </i>
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="#">اردو</a>
-                                    <a className="dropdown-item" href="#">English</a>
+                                    <p className="dropdown-item">اردو</p>
+                                    <p className="dropdown-item">English</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <Login/>
         </div>
     );
 };

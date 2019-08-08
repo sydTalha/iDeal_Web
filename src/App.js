@@ -4,6 +4,8 @@ import Items from './Page/Items';
 import Shops from './Page/Shops';
 import PersonShop from './Page/PersonShop'
 import ItemDetail from './Page/ItemDetail';
+import Loader from './components/Loader/Loader';
+import Signup from './Page/Signup';
 import NavHome from './components/Navbar/NavbarHome';
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
@@ -14,13 +16,20 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+        this.state={
+            load:true
+        }
     }
-
 
     render() {
 
         let hist = createBrowserHistory();
-        return (
+        return this.state.load===false ?
+            (
+                <Loader/>
+            )
+                :
+            (
             <div className='index-page'>
                 <NavHome/>
                 <Router history={hist}>
@@ -29,6 +38,7 @@ class App extends Component {
                         <Route path="/shops" component={Shops} />
                         <Route path="/detail" component={ItemDetail} />
                         <Route path="/personShop" component={PersonShop} />
+                        <Route path="/signup" component={Signup} />
                         <Route path="/" component={Home} />
                     </Switch>
                 </Router>
