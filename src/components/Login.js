@@ -9,7 +9,7 @@ const Login = () => {
                     <div className="card card-signup card-plain">
                             <div className=" card-header card-header-info text-center">
                                 <button type="button" className="close" data-dismiss="modal" aria-hidden="true">
-                                    <i className="material-icons">clear</i>
+                                    <i className="material-icons text-white">clear</i>
                                 </button>
                                 <h4 className="card-title">Log in</h4>
                                 <div className="social-line">

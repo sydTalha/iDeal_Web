@@ -12,7 +12,7 @@ class PersonShop extends Component {
                             <div className="col-md-6 ml-auto mr-auto">
                                 <div className="profile">
                                     <div className="avatar">
-                                        <img src="../assets/img/faces/christian.jpg" alt="Circle Image"
+                                        <img src="../assets/img/faces/christian.jpg" alt="img"
                                              className="img-raised rounded-circle img-fluid"/>
                                     </div>
                                     <div className="name">

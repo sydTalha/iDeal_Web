@@ -1,5 +1,4 @@
 import React from 'react';
-import CountdownVisual from '../CountdownVisual';
 
 const CardItem = () => {
     const link="https://media.wired.com/photos/59266fdecfe0d93c47430335/master/pass/Medical-Device-2x1-467546179.jpg";
@@ -32,8 +31,5 @@ const CardItem = () => {
 
 const styleCard={
     width:'20rem'
-};
-const styleButton={
-    marginBottom: '-10px'
 };
 export default CardItem;

@@ -1,0 +1,111 @@
+
+.wrapper{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center center;
+}
+.squares  {
+    position: absolute;
+    transition: 0.5s ease-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.squares.square1 {
+    background-image: url("https://image.flaticon.com/icons/svg/1263/1263022.svg");
+    animation: move-right-left 4s infinite;
+    height: 30%;
+    width: 30%;
+    opacity: 0.05;
+    left: 3%;
+    top: 21%;
+}
+
+
+.squares.square2 {
+    background-image: url("https://image.flaticon.com/icons/svg/1976/1976897.svg");
+    animation: move-right-left 6s infinite;
+    height: 40%;
+    width: 40%;
+    opacity: 0.4;
+    right: -5%;
+    top: -12%;
+}
+
+.squares.square3 {
+    background-image: url("https://image.flaticon.com/icons/svg/1263/1263730.svg");
+    animation: move-right-left 5s infinite;
+    height: 20%;
+    width: 20%;
+    opacity: 0.1;
+    left: -5%;
+    bottom: 10%;
+}
+
+.squares.square4 {
+    background-image: url("https://image.flaticon.com/icons/svg/1976/1976897.svg");
+    animation: move-right-left 10s infinite;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    right: 27%;
+    top: 70%;
+}
+
+.squares.square5 {
+    animation: move-right-left 6s infinite;
+    background-image: url("https://image.flaticon.com/icons/svg/1976/1976980.svg");
+    height: 25%;
+    width: 25%;
+    opacity: 0.1;
+    left: 32%;
+    bottom: 29%;
+}
+
+.squares.square6 {
+    animation: move-right-left 9s infinite;
+    background-image: url("https://image.flaticon.com/icons/svg/1976/1976920.svg");
+    right: 30%;
+    top: 30%;
+    height: 80px;
+    width: 80px;
+    opacity: 0.2;
+}
+
+.squares.square7 {
+    background-image: url("https://image.flaticon.com/icons/svg/1976/1976898.svg");
+    animation: move-right-left 3s infinite;
+    width: 40%;
+    height: 40%;
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move-right-left {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes move-right-left {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}

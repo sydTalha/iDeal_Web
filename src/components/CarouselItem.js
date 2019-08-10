@@ -7,10 +7,9 @@ class CarouselItem extends Component{
             <div>
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <div className="carousel-indicators">
-                        <img src="../../../assets/img/bg2.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
-                        <img src="../../../assets/img/bg3.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
-                        <img src="../../../assets/img/bg.jpg" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
-
+                        <img src="../../../assets/img/bg2.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
+                        <img src="../../../assets/img/bg3.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
+                        <img src="../../../assets/img/bg.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
@@ -25,12 +24,12 @@ class CarouselItem extends Component{
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                        data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="carousel-control-prev-icon" aria-hidden="true"/>
                         <span className="sr-only">Previous</span>
                     </a>
                     <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
                        data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="carousel-control-next-icon" aria-hidden="true"/>
                         <span className="sr-only">Next</span>
                     </a>
                 </div>
@@ -46,6 +45,6 @@ const extraImgStyle={
     borderRadius: '8px',
     marginLeft: '5px',
     marginRight: '5px'
-}
+};
 
 export default CarouselItem;

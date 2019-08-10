@@ -11,7 +11,7 @@ const CardItem = () => {
                     <div style={styleCountdown}>
                         <CountdownVisual />
                     </div>
-                    <img className='card-img-top' src={link}/>
+                    <img className='card-img-top' src={link} alt='img'/>
                 </div>
             </div>
             <div className="card-body">
@@ -43,8 +43,10 @@ const styleCard={
 
 const styleCountdown={
     position:'absolute',
-    marginTop: '90px',
-    marginLeft: '22px'
+    marginTop:'80px',
+    marginLeft: '30px',
+    marginRight: '20px',
+    width: '80%'
 };
 
 const styleBadge={

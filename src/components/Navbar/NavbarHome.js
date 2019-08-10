@@ -3,6 +3,9 @@ import Login from '../Login';
 import './navbarStyle.css';
 
 const NavbarHome = () => {
+    const home='/home';
+    const signup='/signup';
+    const itemPage='/items';
     return(
         <div>
             <nav className="navbar  bg-info" id="navbar-position">
@@ -11,14 +14,14 @@ const NavbarHome = () => {
                     <div>
                         <ul className="nav"  style={areaIconStyle}>
                             <li className="nav-item">
-                                <a className="nav-link" data-toggle="tooltip" title="Home" href="/">
+                                <a className="nav-link" data-toggle="tooltip" title="Home" href={home}>
                                     <i className="material-icons" style={iconStyle}>
                                         home
                                     </i>
                                 </a>
                             </li>
                             <li className="nav-item" >
-                                <a className="nav-link" href="/items">
+                                <a className="nav-link" href={itemPage}>
                                     <i className="material-icons" data-toggle="tooltip" title="Search" style={iconStyle}>
                                         search
                                     </i>
@@ -33,7 +36,7 @@ const NavbarHome = () => {
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a className="dropdown-item" data-toggle="modal" data-target="#loginModal">Login</a>
-                                    <a className="dropdown-item" href='/signup'>Sign up</a>
+                                    <a className="dropdown-item" href={signup}>Sign up</a>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
