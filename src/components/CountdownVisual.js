@@ -1,11 +1,11 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
 
-const CountdownVisual = () => {
-
-    const Completionist = () => (
+const CountdownVisual = (props) => {
+    const time =props.time;
+    const Completionist = (props) => (
         <div>
-
+            {props.onComplete}
         </div>
     );
     const renderer = ({ days,hours, minutes, seconds, completed }) => {
@@ -42,7 +42,7 @@ const CountdownVisual = () => {
     return(
         <div>
             <Countdown
-                date={Date.now() + 1000000000}
+                date={time}
                 renderer={renderer}
             />
         </div>

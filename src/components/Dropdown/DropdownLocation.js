@@ -27,7 +27,7 @@ const DropdownLocation=()=>{
                         <button className="btn btn-link">Sindh</button>
                     </div>
                     <div className='col-auto'>
-                        <button className="btn btn-link">khyber pakhtunkhwa</button>
+                        <button className="btn btn-link">khyber Pakhtunkhwa</button>
                     </div>
                 </div>
 

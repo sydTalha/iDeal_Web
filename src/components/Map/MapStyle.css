@@ -8,6 +8,8 @@
 
 @media screen and (min-width: 768px) {
     #pk-map{
-        width: 480px;
+        position: relative;
+        width: 540px;
+        top:-20px
     }
 }

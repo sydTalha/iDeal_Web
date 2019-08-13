@@ -17,23 +17,37 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state={
-            load:true
+            load:true,
+            dataOBJ:null
         }
     }
 
-    componentWillMount(){
+    componentDidMount() {
+        console.log(new Date().getTime());
+        fetch('http://localhost:8181/webProject/config.php', {
+            method: 'get',
+        })
+            .then((response) => response.json())
+            .then((config)=> {
+                this.setState({
+                    load: config
+                });
+            })
+            .catch(()=>console.log('error'));
+    }
 
-    };
     render() {
         let hist = createBrowserHistory();
 
         return this.state.load===false ?
             (
-                <Loader/>
+                <div style={styleLoading}>
+                    <Loader/>
+                </div>
             )
                 :
             (
-            <div className='index-page bg-rose'>
+            <div className='index-page'>
 
                 <NavHome/>
                 {
@@ -58,5 +72,12 @@ class App extends Component {
         );
     }
 }
+
+const styleLoading={
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)'
+};
 
 export default (App)

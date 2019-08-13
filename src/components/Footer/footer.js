@@ -5,7 +5,7 @@ import './footerStyle.css'
 class Footer extends Component{
     render() {
         return(
-            <footer className="footer footer-default bg-info">
+            <footer className="footer footer-default bg-info" style={styleFooter}>
                 <div className="container">
                     <nav className="float-none">
                         <ul>
@@ -35,5 +35,8 @@ class Footer extends Component{
         );
     }
 }
-
+const styleFooter={
+    position:'relative',
+    bottom:'100%'
+};
 export default Footer;

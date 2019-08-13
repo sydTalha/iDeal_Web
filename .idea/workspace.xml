@@ -3,22 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4e0f2d47-1aa2-4a00-a200-2136f470308c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/demo/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-kit/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/material-kit/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-kit/bootstrap/scss/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/material-kit/bootstrap/scss/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-kit/bootstrap/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/material-kit/bootstrap/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-kit/variables/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/material-kit/variables/_dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-kit/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/material-kit/_responsive.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page/Home/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home/homeStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Page/Items.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Items.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page/PersonShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/PersonShop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/CardItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/CardItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/CardShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/CardShop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountdownVisual.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountdownVisual.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dropdown/DropdownLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown/DropdownLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footerStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footerStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loader/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Map/MapStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Map/MapStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +31,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>navbar</find>
-      <find>bg-info</find>
-      <find>card-header-info</find>
-      <find>page-header</find>
-      <find>wrapper</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,26 +59,27 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public\assets\img" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\graphics\" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\Page" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\graphics\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\Page\Home\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Navbar\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Map\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Card\" />
-      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src" />
-      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public" />
-      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\Page" />
-      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -147,6 +137,9 @@
       <workItem from="1565417109037" duration="9537000" />
       <workItem from="1565448359083" duration="46000" />
       <workItem from="1565448790024" duration="7960000" />
+      <workItem from="1565508881274" duration="12769000" />
+      <workItem from="1565601241782" duration="759000" />
+      <workItem from="1565690839239" duration="18037000" />
     </task>
     <task id="LOCAL-00001" summary="Allah kry ho jaye">
       <created>1564323682885</created>
@@ -189,7 +182,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

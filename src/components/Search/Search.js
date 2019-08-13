@@ -3,7 +3,7 @@ import DropdownCategory from "../Dropdown/DropdownCategory";
 import DropdownLocation from "../Dropdown/DropdownLocation";
 const Search =()=>{
     return(
-        <div className='container bg-white rounded' style={styleContainer}>
+        <div className='container  bg-white rounded' style={styleContainer}>
             <div className='row'>
                 <div className='col'>
                     <a className="nav-link btn btn-outline-success text-success" id="dropDownCategory"
@@ -42,7 +42,7 @@ const styleContainer={
 };
 const styleInput={
     width:'100%'
-}
+};
 const styleButton={
     textAlign:'center',
     marginTop:'15px'
