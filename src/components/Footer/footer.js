@@ -1,7 +1,8 @@
 import React from 'react';
 import {Component} from 'react';
-import './footerStyle.css'
-
+import './footerStyle.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 class Footer extends Component{
     render() {
         return(
@@ -15,8 +16,8 @@ class Footer extends Component{
                             <li>
                                 <div id="email_field">
                                     <input type="email" id="email_input" placeholder='Email'/>
-                                    <button className="btn btn-dark bg-dark">
-                                        <i className="material-icons">email</i> join us
+                                    <button className="btn btn-dark bg-dark" id="emailButton">
+                                        <FontAwesomeIcon  icon={faPaperPlane}/> &nbsp;&nbsp;join us
                                     </button>
                                 </div>
                             </li>

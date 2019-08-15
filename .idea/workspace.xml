@@ -5,9 +5,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/Page/ItemDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/ItemDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Page/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/public/assets/css/material-kit.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-kit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page/Home/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Home/homeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page/Items.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/Items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dropdown/DropdownCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown/DropdownCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dropdown/DropdownLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown/DropdownLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footerStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footerStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -272,18 +288,28 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+<<<<<<< Updated upstream
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\Page" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components" />
     </key>
+=======
+>>>>>>> Stashed changes
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Navbar\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Map\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\Card\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components\" />
       <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public\assets\img" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\graphics\" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\public" />
+      <recent name="C:\Users\Bilal\Desktop\webProject\iDeal_Web\src\Page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,7 +362,20 @@
       <workItem from="1564834414194" duration="8882000" />
       <workItem from="1564852159378" duration="2530000" />
       <workItem from="1565006132412" duration="4740000" />
+<<<<<<< Updated upstream
       <workItem from="1565855472932" duration="2887000" />
+=======
+      <workItem from="1565350918667" duration="6277000" />
+      <workItem from="1565364037941" duration="11634000" />
+      <workItem from="1565417109037" duration="9537000" />
+      <workItem from="1565448359083" duration="46000" />
+      <workItem from="1565448790024" duration="7960000" />
+      <workItem from="1565508881274" duration="12769000" />
+      <workItem from="1565601241782" duration="759000" />
+      <workItem from="1565690839239" duration="19450000" />
+      <workItem from="1565764226068" duration="14163000" />
+      <workItem from="1565857220472" duration="2877000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Allah kry ho jaye">
       <created>1564323682885</created>

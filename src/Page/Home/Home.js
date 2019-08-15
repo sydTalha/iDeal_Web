@@ -4,6 +4,20 @@ import './homeStyle.css';
 import background from '../../graphics/waves.png';
 
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state={
+            tagLine:[
+                "Discover the world of medical equipments",
+                "It's the equipments you've always dreamed of",
+                "The dependable source for medical equipments",
+                "The wise choice for medical equipment aficionados",
+                "Let's talk medical equipment"
+            ]
+        }
+    }
+
     render() {
         const links={
           shops:'/shops',
@@ -21,8 +35,8 @@ class Home extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className='col'>
-                                    <h1 className='text-dark'>The dependable source for medical equipments</h1>
-                                    <a  role='button' className="btn btn-success" href={links['shops']}>Find Shop</a>
+                                    <h1 className='text-dark'>{this.state.tagLine[Math.floor(Math.random() * 5)]}</h1>
+                                    <a  role='button' className="btn btn-success" href={links['shops']}>&nbsp;Find Shop&nbsp;</a>
                                     <br/>
                                     <a  className="btn btn-outline-success text-dark" href={links['signUp']}>Open Shop</a>
                                 </div>

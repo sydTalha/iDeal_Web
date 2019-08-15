@@ -1,11 +1,12 @@
 export class User{
-    constructor(firstName, lastName, userName, email, contactNumber, location) {
+    constructor(firstName, lastName, userName, email, contactNumber, location,profilePicture) {
         this.firstName=firstName;
         this.lastName=lastName;
         this.userName=userName;
         this.email=email;
         this.contactNumber=contactNumber;
         this.location=location;
+        this.profilePicture=profilePicture;
     }
 
     get userFirstName(){

@@ -11,20 +11,41 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/footer";
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
+import {User} from "./Model/User";
 
 class App extends Component {
 
     constructor(props) {
         super(props);
         this.state={
-            load:true,
-            dataOBJ:null
-        }
+            login:false,
+            load:false,
+            dataOBJ:null,
+            user:null
+        };
+        App.login = App.login.bind(this);
     }
 
+    static login(e) {
+        e.preventDefault();
+        fetch('https://192.168.100.7:443/webProject/login.php', {
+            method: 'get',
+        })
+            .then((response) => response.json())
+            .then((res)=> {
+                const user=new User(res["firstName"],res["lastName"],res["userName"],res["email"],
+                res["contactNumber"],res["location"],res["profilePic"]);
+                this.setState({
+                    login:true,
+                    user:user
+                });
+                console.log(this.state);
+            })
+            .catch((e)=>console.log(e));
+    }
     componentDidMount() {
-        console.log(new Date().getTime());
-        fetch('http://localhost:8181/webProject/config.php', {
+
+        fetch('https://192.168.100.7/webProject/config.php', {
             method: 'get',
         })
             .then((response) => response.json())
@@ -34,6 +55,7 @@ class App extends Component {
                 });
             })
             .catch(()=>console.log('error'));
+
     }
 
     render() {
@@ -48,8 +70,12 @@ class App extends Component {
                 :
             (
             <div className='index-page'>
-
-                <NavHome/>
+                {
+                    this.state.login ?
+                        <NavHome loginFunction={App.login} login={this.state.login} avatar={this.state.user["profilePicture"]}/>
+                        :
+                        <NavHome loginFunction={App.login} login={this.state.login}/>
+                }
                 {
                     hist.location["pathname"]!=='/' && hist.location["pathname"]!=='/home' &&
                         hist.location["pathname"]!=='/signup' && hist.location["pathname"]!=='/personshop' &&
