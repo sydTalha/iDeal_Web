@@ -21,27 +21,62 @@ class App extends Component {
             login:false,
             load:false,
             dataOBJ:null,
-            user:null
+            user:null,
+            loginData:{
+                username:'',
+                password:''
+            }
         };
         App.login = App.login.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
+    handleChange(e) {
+        e.preventDefault();
+        let value = e.target.value;
+        let name = e.target.id;
+        this.setState(
+            prevState => ({
+                loginData:{
+                    ...prevState.loginData,
+                    [name]: value,
+                }
+            })
+        );
+    }
+
+    handleLogout(){
+
+    }
     static login(e) {
         e.preventDefault();
-        fetch('https://192.168.100.7:443/webProject/login.php', {
-            method: 'get',
-        })
-            .then((response) => response.json())
-            .then((res)=> {
-                const user=new User(res["firstName"],res["lastName"],res["userName"],res["email"],
-                res["contactNumber"],res["location"],res["profilePic"]);
-                this.setState({
-                    login:true,
-                    user:user
-                });
-                console.log(this.state);
+        const password=this.state.loginData["password"];
+        const username=this.state.loginData["password"];
+        if(password==='' || username===''){
+
+        }
+        else {
+            fetch('https://localhost/webProject/login.php', {
+                method: 'post',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({
+                    "username": username,
+                    "password": password,
+                })
             })
-            .catch((e)=>console.log(e));
+                .then((response) => response.json())
+                .then((res)=> {
+                    const user=new User(res["firstName"],res["lastName"],res["userName"],res["email"],
+                        res["contactNumber"],res["location"],res["profilePic"]);
+                    this.setState({
+                        login:true,
+                        user:user
+                    });
+                })
+                .catch((e)=>console.log(e));
+        }
+
     }
     componentDidMount() {
 
@@ -72,9 +107,10 @@ class App extends Component {
             <div className='index-page'>
                 {
                     this.state.login ?
-                        <NavHome loginFunction={App.login} login={this.state.login} avatar={this.state.user["profilePicture"]}/>
+                        <NavHome loginFunction={App.login} change={this.handleChange}
+                                 login={this.state.login} avatar={this.state.user["profilePicture"]}/>
                         :
-                        <NavHome loginFunction={App.login} login={this.state.login}/>
+                        <NavHome loginFunction={App.login} login={this.state.login} change={this.handleChange}/>
                 }
                 {
                     hist.location["pathname"]!=='/' && hist.location["pathname"]!=='/home' &&

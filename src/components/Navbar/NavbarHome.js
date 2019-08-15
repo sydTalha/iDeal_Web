@@ -88,7 +88,7 @@ const NavbarHome = (props) => {
                     </div>
                 </div>
             </nav>
-            <Login loginFun={props.loginFunction}/>
+            <Login loginFun={props.loginFunction} handleChange={props.change}/>
         </div>
     );
 };

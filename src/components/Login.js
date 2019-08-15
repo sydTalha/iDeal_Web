@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFacebookSquare, faGoogle} from "@fortawesome/free-brands-svg-icons";
-import {faGooglePlusSquare} from "@fortawesome/free-brands-svg-icons/faGooglePlusSquare";
+import {faGoogle} from "@fortawesome/free-brands-svg-icons";
+import {faFacebookF} from "@fortawesome/free-brands-svg-icons/faFacebookF";
 
 
 class Login extends Component{
@@ -13,38 +13,7 @@ class Login extends Component{
     constructor(props){
         super(props);
 
-        this.state={
-            login:{
-                email: '',
-                password: ''
-            }
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    }
 
-    handleChange(event){
-        let value = event.target.value;
-        let id = event.target.id;
-        this.setState(
-            prevState => ({
-                login: {
-                    ...prevState.login,
-                    [id]: value
-                }
-            }),
-        );
-    }
-    handleFormSubmit(event){
-        event.preventDefault();
-        let user = this.state.login;
-        if(user.email === "" || user.password === ""){
-            console.log("fields empty")
-        }
-        else{
-            //login user
-
-        }
     }
 
     render() {
@@ -68,7 +37,7 @@ class Login extends Component{
                                 <button type="button" className="close" data-dismiss="modal" aria-hidden="true">
                                     <i className="material-icons text-white">clear</i>
                                 </button>
-                                <h4 className="card-title">Log in</h4>
+                                <h4 className="card-title">&nbsp;&nbsp;&nbsp;&nbsp;Log in</h4>
                                 <div className="social-line">
                                     <a className="btn btn-just-icon btn-link btn-white">
                                         <FacebookLogin
@@ -80,12 +49,21 @@ class Login extends Component{
                                                 <button onClick={renderProps.onClick} style={
                                                     {
                                                         backgroundColor:'transparent',
-                                                        border:'0px solid transparent',
-                                                        color: 'white',
-                                                        height:"32px"
+                                                        border:'none'
                                                     }
                                                 }>
-                                                    <FontAwesomeIcon icon={faFacebookSquare}/></button>
+                                                    <FontAwesomeIcon style={
+                                                        {
+                                                            backgroundColor:'white',
+                                                            padding:'2px',
+                                                            borderRadius:'5px',
+                                                            color: '#2879fe',
+                                                            height:"32px",
+                                                            width:'32px',
+                                                            paddingBottom:'0px'
+                                                        }
+                                                    }
+                                                                     icon={faFacebookF}/></button>
                                             )}
                                         />
                                     </a>
@@ -98,12 +76,20 @@ class Login extends Component{
                                                 <button onClick={renderProps.onClick} disabled={renderProps.disabled} style={
                                                     {
                                                         backgroundColor:'transparent',
-                                                        border:'0px solid transparent',
-                                                        color: 'white',
-                                                        height:"32px"
+                                                        border:'none'
                                                     }
                                                 }>
-                                                    <FontAwesomeIcon icon={faGooglePlusSquare}/>
+                                                    <FontAwesomeIcon style={
+                                                        {
+                                                            backgroundColor:'white',
+                                                            padding:'2px',
+                                                            borderRadius:'5px',
+                                                            color: '#2879fe',
+                                                            height:"32px",
+                                                            width:'32px',
+                                                        }
+                                                    }
+                                                                     icon={faGoogle}/>
                                                 </button>
                                             )}
                                         />
@@ -115,29 +101,41 @@ class Login extends Component{
                                     <p className="description text-center">Or Be Classical</p>
                                     <div className="card-body">
 
-                                        <div className="form-group bmd-form-group has-success">
+                                        <div className="form-group bmd-form-group has-info">
                                             <div className="input-group">
                                                 <div className="input-group-prepend">
                                                     <div className="input-group-text"><i
-                                                        className="material-icons">email</i></div>
+                                                        className="material-icons">person</i></div>
                                                 </div>
-                                                <input type="text" className="form-control" placeholder="Email"/>
+                                                <input
+                                                    id="username"
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Username"
+                                                    onChange={this.props.handleChange}
+                                                />
                                             </div>
                                         </div>
-                                        <div className="form-group bmd-form-group has-success">
+                                        <div className="form-group bmd-form-group has-info">
                                             <div className="input-group">
                                                 <div className="input-group-prepend">
                                                     <div className="input-group-text"><i
                                                         className="material-icons">lock_outline</i></div>
                                                 </div>
-                                                <input type="password" placeholder="Password" className="form-control"/>
+                                                <input
+                                                    id="password"
+                                                    type="password"
+                                                    placeholder="Password"
+                                                    className="form-control"
+                                                    onChange={this.props.handleChange}
+                                                />
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <div className="modal-footer justify-content-center">
-                                <a href="#pablo" className="btn btn-success btn-round">Login</a>
+                                <a onClick={this.props.loginFun} className="btn btn-success btn-round text-white">Login</a>
                             </div>
                         </div>
                     </div>
