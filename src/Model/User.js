@@ -1,12 +1,23 @@
 export class User{
-    constructor(firstName, lastName, userName, email, contactNumber, location,profilePicture) {
+    constructor(firstName, lastName, userName, email, contactNumber, province,city,zip,profilePicture) {
         this.firstName=firstName;
+        sessionStorage.setItem("firstName", firstName);
         this.lastName=lastName;
+        sessionStorage.setItem("lastName", lastName);
         this.userName=userName;
+        sessionStorage.setItem("userName", userName);
         this.email=email;
+        sessionStorage.setItem("email", email);
         this.contactNumber=contactNumber;
-        this.location=location;
+        sessionStorage.setItem("contactNumber", contactNumber);
+        this.province=province;
+        sessionStorage.setItem("province",province);
+        this.city=city;
+        sessionStorage.setItem("city",city);
+        this.zip=zip;
+        sessionStorage.setItem("zip",zip);
         this.profilePicture=profilePicture;
+        sessionStorage.setItem("profilePicture", profilePicture);
     }
 
     get userFirstName(){
@@ -24,8 +35,8 @@ export class User{
     get userContactNumber(){
         return this.contactNumber;
     }
-    get userLocation(){
-        return this.location;
+    get userProvince(){
+        return this.province;
     }
 
     set userFirstName(firstName){
@@ -43,7 +54,7 @@ export class User{
     set userContactNumber(contactNumber){
         this.contactNumber=contactNumber;
     }
-    set userLocation(location){
-        this.location=location;
+    set userProvince(province){
+        this.province=province;
     }
 }

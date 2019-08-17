@@ -3,7 +3,7 @@ import './MapStyle.css';
 
 const Map = () => {
     function onClick(event) {
-        console.log(event.target.id);
+        window.location.replace(`/items?location=${event.target.id}`);
     }
     return(
         <div >

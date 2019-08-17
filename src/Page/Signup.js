@@ -24,6 +24,19 @@ class Signup extends Component{
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
+    componentWillMount() {
+        const url = new URL(window.location.href);
+        const dataSocial = url.searchParams.get("social");
+        if(dataSocial==='facebook' || dataSocial==='google'){
+            const dataUname = url.searchParams.get("username");
+            const dataEmail = url.searchParams.get("email");
+            this.setState({
+                uname:dataUname,
+                inputEmail:dataEmail
+            });
+        }
+    }
+
     handleChange(event){
         let value = event.target.value;
         let id = event.target.id;
@@ -72,7 +85,7 @@ class Signup extends Component{
 
         return (
             <div className='container'>
-                <form id="form" method="POST" enctype="multipart/form-data">
+                <form id="form" method="POST" encType="multipart/form-data">
                     <div className="text-center">
                         <div className="thumbnail">
                             <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="..."/>
@@ -99,11 +112,16 @@ class Signup extends Component{
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label style={labelStyle} htmlFor="uname">User Name</label>
-                            <input type="text" className="form-control" id="uname" onChange={this.handleChange} placeholder="User name"/>
+                            <input type="text" className="form-control" id="uname"
+                                   onChange={this.handleChange} placeholder="User name"
+                                   value={this.state.signUp["uname"]}
+                            />
                         </div>
                         <div className="form-group col-md-6">
                             <label style={labelStyle} htmlFor="inputEmail4">Email</label>
-                            <input type="email" className="form-control" id="inputEmail" onChange={this.handleChange} placeholder="Email"/>
+                            <input type="email" className="form-control"
+                                   id="inputEmail" onChange={this.handleChange} placeholder="Email"
+                                   value={this.state.signUp["email"]}/>
                         </div>
                     </div>
                     <div className="form-row">

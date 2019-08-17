@@ -14,6 +14,9 @@ const NavbarHome = (props) => {
     const home='/home';
     const signup='/signup';
     const itemPage='/items';
+    function forwardProfile(){
+        window.location.replace(`/personshop?me=true`);
+    }
     return(
         <div>
             <nav className="navbar bg-info" id="navbar-position">
@@ -41,18 +44,22 @@ const NavbarHome = (props) => {
                                         <a className="nav-link " href="#" id="navbarDropdownMenuLink"
                                            data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                             <div data-toggle="tooltip" style={iconStyle} title="Account">
-                                                <img src={props.avatar} alt="avatar" style={avatarStyle}/>
+                                                <img src={sessionStorage.getItem("profilePicture")}
+                                                     alt="avatar" style={avatarStyle}/>
                                             </div>
                                         </a>
                                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a className="dropdown-item"><FontAwesomeIcon  icon={faHeart} />
+                                            <a className="dropdown-item">
+                                                <FontAwesomeIcon  icon={faHeart} />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;Wish List
                                             </a>
-                                            <a className="dropdown-item"><FontAwesomeIcon  icon={faUser} />
+                                            <a className="dropdown-item" onClick={forwardProfile}>
+                                                <FontAwesomeIcon  icon={faUser} />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;Profile
                                             </a>
                                             <hr/>
-                                            <a className="dropdown-item"><FontAwesomeIcon  icon={faSignOutAlt} />
+                                            <a className="dropdown-item" onClick={props.logout}>
+                                                <FontAwesomeIcon  icon={faSignOutAlt} />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;Logout
                                             </a>
                                         </div>
@@ -88,10 +95,11 @@ const NavbarHome = (props) => {
                     </div>
                 </div>
             </nav>
-            <Login loginFun={props.loginFunction} handleChange={props.change}/>
+            <Login loginData={props.data}/>
         </div>
     );
 };
+//handleChange={props.change}
 const areaIconStyle={
     textAlign:'center'
 };

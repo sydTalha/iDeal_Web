@@ -8,13 +8,33 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
-            tagLine:[
+            tagLineENGLISH:[
                 "Discover the world of medical equipments",
                 "It's the equipments you've always dreamed of",
                 "The dependable source for medical equipments",
                 "The wise choice for medical equipment aficionados",
                 "Let's talk medical equipment"
+            ],
+            tagLineURDU:[
+                "طبی سازوسامان کی دنیا دریافت کریں۔",
+                "یہ وہ طبی سازوسامان ہے جس کا آپ نے ہمیشہ خواب دیکھا ہے۔",
+                "طبی سازوسامان کا انحصار کرنے والا ذریعہ۔",
+                "طبی سازوسامان کے لئے عقلمند انتخاب۔",
+                "آئیے میڈیکل آلات کی بات کریں۔",
+            ],
+            appDataENGLISH:[
+                "A place where Buyers meet Sellers",
+                "Find shop",
+                "open shop",
+                "connect now !"
+            ],
+            appDataURDU:[
+                "ایک ایسی جگہ جہاں خریدار فروخت کنندگان سے ملتے ہیں۔",
+                "دکان تلاش کریں",
+                "کاروبار کی جگہ",
+                "ابھی جڑیں !"
             ]
+
         }
     }
 
@@ -35,7 +55,7 @@ class Home extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className='col'>
-                                    <h1 className='text-dark'>{this.state.tagLine[Math.floor(Math.random() * 5)]}</h1>
+                                    <h1 className='text-dark'>{this.state.tagLineURDU[Math.floor(Math.random() * 5)]}</h1>
                                     <a  role='button' className="btn btn-success" href={links['shops']}>&nbsp;Find Shop&nbsp;</a>
                                     <br/>
                                     <a  className="btn btn-outline-success text-dark" href={links['signUp']}>Open Shop</a>

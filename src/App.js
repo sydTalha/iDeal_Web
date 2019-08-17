@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Home from './Page/Home/Home'
 import Items from './Page/Items';
 import Shops from './Page/Shops';
@@ -7,10 +7,9 @@ import ItemDetail from './Page/ItemDetail';
 import Loader from './components/Loader/Loader';
 import Signup from './Page/Signup';
 import NavHome from './components/Navbar/NavbarHome';
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import {createBrowserHistory} from "history";
+import {Route, Router, Switch} from "react-router-dom";
 import Footer from "./components/Footer/footer";
-import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 import {User} from "./Model/User";
 
 class App extends Component {
@@ -22,75 +21,64 @@ class App extends Component {
             load:false,
             dataOBJ:null,
             user:null,
-            loginData:{
-                username:'',
-                password:''
-            }
+
         };
-        App.login = App.login.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleLogout = this.handleLogout.bind(this);
+        App.handleLogout = App.handleLogout.bind(this);
+        this.getData=this.getData.bind(this);
     }
 
-    handleChange(e) {
-        e.preventDefault();
-        let value = e.target.value;
-        let name = e.target.id;
-        this.setState(
-            prevState => ({
-                loginData:{
-                    ...prevState.loginData,
-                    [name]: value,
-                }
+    getData(username,password){
+        fetch('https://192.168.100.10/ideal_web/api/login.php', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                "username": username,
+                "password": password,
             })
-        );
-    }
-
-    handleLogout(){
-
-    }
-    static login(e) {
-        e.preventDefault();
-        const password=this.state.loginData["password"];
-        const username=this.state.loginData["password"];
-        if(password==='' || username===''){
-
-        }
-        else {
-            fetch('https://localhost/webProject/login.php', {
-                method: 'post',
-                headers: {'Content-type': 'application/json'},
-                body: JSON.stringify({
-                    "username": username,
-                    "password": password,
-                })
+        })
+            .then((response) => response.json())
+            .then((res)=> {
+                const user=new User(res["firstName"],res["lastName"],res["username"],res["email"],
+                    res["contactNum"],res["province"],res["city"],res["zip"],res["profilePic"]);
+                this.setState({
+                    login: true,
+                    user:user
+                });
             })
-                .then((response) => response.json())
-                .then((res)=> {
-                    const user=new User(res["firstName"],res["lastName"],res["userName"],res["email"],
-                        res["contactNumber"],res["location"],res["profilePic"]);
+            .catch((e)=> {
+                    console.log(e);
                     this.setState({
-                        login:true,
-                        user:user
-                    });
-                })
-                .catch((e)=>console.log(e));
-        }
-
+                        error: 'invalid user'
+                    })
+                }
+            );
     }
+
+    static handleLogout(){
+        this.setState({
+            login:false
+        });
+        sessionStorage.clear();
+    }
+
     componentDidMount() {
 
-        fetch('https://192.168.100.7/webProject/config.php', {
+        fetch('https://192.168.100.10/ideal_web/api/init.php', {
             method: 'get',
         })
             .then((response) => response.json())
             .then((config)=> {
+                console.log(config);
                 this.setState({
-                    load: config
+                    load: config["load"]
                 });
             })
-            .catch(()=>console.log('error'));
-
+            .catch((e)=>console.log(e));
+        if(sessionStorage.getItem("userName")!==null){
+            this.setState({
+                login:true
+            })
+        }
     }
 
     render() {
@@ -107,15 +95,18 @@ class App extends Component {
             <div className='index-page'>
                 {
                     this.state.login ?
-                        <NavHome loginFunction={App.login} change={this.handleChange}
-                                 login={this.state.login} avatar={this.state.user["profilePicture"]}/>
+                        <NavHome loginFunction={App.login}
+                                 login={this.state.login}
+                                 logout={App.handleLogout}
+                                 data={this.getData}
+                                  />
                         :
-                        <NavHome loginFunction={App.login} login={this.state.login} change={this.handleChange}/>
-                }
-                {
-                    hist.location["pathname"]!=='/' && hist.location["pathname"]!=='/home' &&
-                        hist.location["pathname"]!=='/signup' && hist.location["pathname"]!=='/personshop' &&
-                            <Breadcrumb/>
+                        <NavHome loginFunction={App.login}
+                                 login={this.state.login}
+                                 logout={App.handleLogout}
+                                 data={this.getData}
+                        />
+                    // change={this.handleChange}
                 }
                 <Router history={hist}>
                     <Switch>

@@ -48,8 +48,8 @@
                 &,
                 &:focus,
                 &:hover{
-                    background-color: $brand-info;
-                    @include shadow-big-color($brand-info);
+                    background-color: rgb(40,121,254);
+                    @include shadow-big-color(rgb(40,121,254));
                     color: $white-color;
                 }
             }

@@ -1,33 +1,33 @@
 import React from 'react';
 
-const DropdownLocation=()=>{
+const DropdownLocation=(props)=>{
     return(
         <div className='bg-white rounded' className="dropdown-menu" aria-labelledby="dropDownLocation" style={style}>
             <div className='container'>
                 <div className='row align-content-between'>
                     <div className='col'>
-                        <button className="btn btn-link">Balochistan</button>
+                        <button className="btn btn-link" onClick={props.func}>Balochistan</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">Azad Kashmir</button>
+                        <button className="btn btn-link" onClick={props.func}>Azad Kashmir</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">F.C.T</button>
+                        <button className="btn btn-link" onClick={props.func}>F.C.T</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">Northern Areas</button>
+                        <button className="btn btn-link" onClick={props.func}>Northern Areas</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">F.A.T.A</button>
+                        <button className="btn btn-link" onClick={props.func}>F.A.T.A</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">Punjab</button>
+                        <button className="btn btn-link" onClick={props.func}>Punjab</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">Sindh</button>
+                        <button className="btn btn-link" onClick={props.func}>Sindh</button>
                     </div>
                     <div className='col'>
-                        <button className="btn btn-link">khyber Pakhtunkhwa</button>
+                        <button className="btn btn-link" onClick={props.func}>khyber Pakhtunkhwa</button>
                     </div>
                 </div>
 

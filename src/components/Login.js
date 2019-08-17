@@ -4,26 +4,70 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faGoogle} from "@fortawesome/free-brands-svg-icons";
 import {faFacebookF} from "@fortawesome/free-brands-svg-icons/faFacebookF";
+import Alert from "./Alert/Alert";
+import {User} from "../Model/User";
 
 
 class Login extends Component{
 //162600827691-k9rpevo7p5h7tfqossr3a36lb6351mn5.apps.googleusercontent.com
 
-    //icon={<i className="fa fa-facebook-square"/>}
     constructor(props){
         super(props);
+        this.state={
+          error:null,
+            loginData:{
+                username:'',
+                password:''
+            }
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleLogin=this.handleLogin.bind(this);
+    }
+
+    handleLogin(){
+        const password=this.state.loginData["password"];
+        const username=this.state.loginData["username"];
+        if(password==='' || username===''){
+            this.setState({
+                error:'Fields are empty'
+            })
+        }
+        else {
+            this.props.loginData(username,password);
+        }
 
 
     }
 
-    render() {
+    handleChange(e) {
+        let value = e.target.value;
+        let name = e.target.id;
+        this.setState(
+            prevState => ({
+                loginData:{
+                    ...prevState.loginData,
+                    [name]: value,
+                }
+            })
+        );
+    }
 
+
+    render() {
         const responseFacebook = (response) => {
-            console.log(response);
+            const name=response["name"];
+            const email=response["email"];
+            const picture=response["picture"]["data"]["url"];
+            window.location.replace(`/signup?social=facebook&&username=${name}&&`+
+                `email=${email}&&profilePicture=${picture}`);
         };
 
         const responseGoogle = (response) => {
-            console.log(response);
+            const name=response["w3"]["ig"];
+            const email=response["w3"]["U3"];
+            const picture=response["w3"]["Paa"];
+            window.location.replace(`/signup?social=google&&username=${name}&&`+
+                `email=${email}&&profilePicture=${picture}`);
         };
 
 
@@ -98,9 +142,15 @@ class Login extends Component{
                             </div>
                             <div className="modal-body">
                                 <form className="form" method="" action="">
+
                                     <p className="description text-center">Or Be Classical</p>
                                     <div className="card-body">
-
+                                        {
+                                            this.state.error===null?
+                                                <div/>
+                                                :
+                                                <Alert onClick={this.handleToggle} message={this.state.error}/>
+                                        }
                                         <div className="form-group bmd-form-group has-info">
                                             <div className="input-group">
                                                 <div className="input-group-prepend">
@@ -112,7 +162,7 @@ class Login extends Component{
                                                     type="text"
                                                     className="form-control"
                                                     placeholder="Username"
-                                                    onChange={this.props.handleChange}
+                                                    onChange={this.handleChange}
                                                 />
                                             </div>
                                         </div>
@@ -127,7 +177,7 @@ class Login extends Component{
                                                     type="password"
                                                     placeholder="Password"
                                                     className="form-control"
-                                                    onChange={this.props.handleChange}
+                                                    onChange={this.handleChange}
                                                 />
                                             </div>
                                         </div>
@@ -135,7 +185,7 @@ class Login extends Component{
                                 </form>
                             </div>
                             <div className="modal-footer justify-content-center">
-                                <a onClick={this.props.loginFun} className="btn btn-success btn-round text-white">Login</a>
+                                <a onClick={this.handleLogin} className="btn btn-success btn-round text-white">Login</a>
                             </div>
                         </div>
                     </div>
