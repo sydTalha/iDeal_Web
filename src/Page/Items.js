@@ -3,13 +3,13 @@ import CardItem from '../components/Card/CardItem';
 import Search from "../components/Search/Search";
 import empty from "../graphics/empty.svg";
 import Pagination from "../components/Pagination/Pagination";
-import {User} from "../Model/User";
 
 class Items extends Component {
 
     constructor(props) {
         super(props);
         this.state={
+            name:'',
             number:0,
             items:[],
         };
@@ -27,21 +27,41 @@ class Items extends Component {
         const dataCategory = url.searchParams.get("category");
         const dataName = url.searchParams.get("name");
         if(dataCategory!==null || dataLocation!==null || dataName!==null){
-
-        }
-        else if(sessionStorage.getItem("location")!==null){
-            fetch('https://localhost/webProject/pagination.php', {
+            fetch('https://192.168.100.10/ideal_web/api/searchitems_filter.php', {
                 method: 'post',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify({
-                    "location": sessionStorage.getItem("location"),
-                    "number": this.state.number,
+                    "province": dataLocation,
+                    "category": dataCategory,
+                    "name": dataName,
+                    "num": this.state.number,
+                })
+            })
+                .then((response) => response.json())
+                .then((res)=> {
+                    console.log(res);
+                    this.setState({
+                        items:res
+                    });
+                })
+                .catch((e)=> {
+                        console.log(e);
+                    }
+                );
+        }
+        else if(sessionStorage.getItem("id")!==null){
+            fetch('https://192.168.100.10/ideal_web/api/searchitems_nav.php', {
+                method: 'post',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({
+                    "province": sessionStorage.getItem("province"),
+                    "num": this.state.number,
                 })
             })
                 .then((response) => response.json())
                 .then((res)=> {
                     this.setState({
-                        items:res["items"]
+                        items:res
                     });
                 })
                 .catch((e)=> {
@@ -51,7 +71,6 @@ class Items extends Component {
         }
     }
     render() {
-        const time=1595829650349;
         return (
             <div>
                 <nav aria-label="breadcrumb"  role="navigation">
@@ -90,11 +109,14 @@ class Items extends Component {
                                         return(
                                         <div className='col'>
                                             <CardItem
-                                                title={data["Item_Name"]}
-                                                image={data["Image"]}
-                                                time={data["Featured"]}
-                                                ownerName={data["Owner_Name"]}
-                                                ownerPicture={data["Owner_Picture"]}
+                                                id={data.itemid}
+                                                title={data.itemName}
+                                                image={data.imgArr}
+                                                timeCount={data.featureTime}
+                                                ownerId={data.userid}
+                                                ownerName={data.username}
+                                                ownerPicture={data.profilePic}
+                                                url={`/details?item=${data.itemid}&&owner=${data.userid}&&ownerName=${data.username}`}
                                             />
                                         </div>
                                         )

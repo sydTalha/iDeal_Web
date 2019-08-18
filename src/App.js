@@ -38,12 +38,14 @@ class App extends Component {
         })
             .then((response) => response.json())
             .then((res)=> {
-                const user=new User(res["firstName"],res["lastName"],res["username"],res["email"],
-                    res["contactNum"],res["province"],res["city"],res["zip"],res["profilePic"]);
-                this.setState({
-                    login: true,
-                    user:user
-                });
+                if(res["firstName"]!=='') {
+                    const user = new User(res["firstName"], res["lastName"], res["username"], res["email"],
+                        res["contactNum"], res["province"], res["city"], res["zip"], res["profilePic"], res["address"], res["_id"]);
+                    this.setState({
+                        login: true,
+                        user: user
+                    });
+                }
             })
             .catch((e)=> {
                     console.log(e);
@@ -59,6 +61,8 @@ class App extends Component {
             login:false
         });
         sessionStorage.clear();
+
+        window.location.replace('/home');
     }
 
     componentDidMount() {
@@ -68,13 +72,12 @@ class App extends Component {
         })
             .then((response) => response.json())
             .then((config)=> {
-                console.log(config);
                 this.setState({
-                    load: config["load"]
+                    load: config
                 });
             })
             .catch((e)=>console.log(e));
-        if(sessionStorage.getItem("userName")!==null){
+        if(sessionStorage.getItem("id")!==null){
             this.setState({
                 login:true
             })

@@ -2,25 +2,58 @@ import React,{Component} from 'react';
 import CardPerson from '../components/Card/CardPerson';
 import CardItemInfo from "../components/Card/CardItemInfo";
 class ItemDetail extends Component{
-        render()
+    constructor(props){
+        super(props);
+        this.state={
+            item:{}
+        }
+    }
+    componentDidMount() {
+        const url = new URL(window.location.href);
+        const dataItem = url.searchParams.get("item");
+        fetch('https://192.168.100.10/ideal_web/api/itemdetails.php', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                "itemid": dataItem,
+            })
+        })
+            .then((response) => response.json())
+            .then((res)=> {
+                console.log(res.imgArr[0]);
+                this.setState({
+                    item:res
+                })
+            })
+            .catch((e)=> {
+                    console.log(e);
+                }
+            );
+    }
+
+    render()
         {
             return(
                 <div className='container'>
                     <div className='row'>
                         <div className='col'>
-                            <CardItemInfo/>
+
+                            <CardItemInfo title={this.state.item.name}
+                                          price={this.state.item.price}
+                                          arr={this.state.item.imgArr}/>
                         </div>
                         <div className='col-md-auto'>
-                            <CardPerson/>
+                            <CardPerson name={new URL(window.location.href).searchParams.get("ownerName")}
+                                        id={new URL(window.location.href).searchParams.get("owner")}
+                                        title={this.state.item.name}
+                            />
                         </div>
                     </div>
                     <h3>Description</h3>
                     <p className='col-sm-auto col-8'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                        {
+                       (this.state.item.desc)}
+
                     </p>
                 </div>
         );

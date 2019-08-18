@@ -2,7 +2,7 @@ import React from 'react';
 
 const DropdownLocation=(props)=>{
     return(
-        <div className='bg-white rounded' className="dropdown-menu" aria-labelledby="dropDownLocation" style={style}>
+        <div className="bg-white rounded dropdown-menu" aria-labelledby="dropDownLocation" style={style}>
             <div className='container'>
                 <div className='row align-content-between'>
                     <div className='col'>

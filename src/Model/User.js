@@ -1,5 +1,5 @@
 export class User{
-    constructor(firstName, lastName, userName, email, contactNumber, province,city,zip,profilePicture) {
+    constructor(firstName, lastName, userName, email, contactNumber, province,city,zip,profilePicture,address,id) {
         this.firstName=firstName;
         sessionStorage.setItem("firstName", firstName);
         this.lastName=lastName;
@@ -18,6 +18,10 @@ export class User{
         sessionStorage.setItem("zip",zip);
         this.profilePicture=profilePicture;
         sessionStorage.setItem("profilePicture", profilePicture);
+        this.address=address;
+        sessionStorage.setItem("address", address);
+        this.id=id;
+        sessionStorage.setItem("id", id);
     }
 
     get userFirstName(){

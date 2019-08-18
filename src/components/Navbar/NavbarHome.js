@@ -13,9 +13,10 @@ import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
 const NavbarHome = (props) => {
     const home='/home';
     const signup='/signup';
-    const itemPage='/items';
+    const itemPage='/items?name=&&location=&&category=';
+
     function forwardProfile(){
-        window.location.replace(`/personshop?me=true`);
+        window.location.replace(`/personshop?me=true&&id=${sessionStorage.getItem("id")}`);
     }
     return(
         <div>

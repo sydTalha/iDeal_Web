@@ -1,19 +1,37 @@
 import React from 'react'
-const CardPerson=()=>{
+const CardPerson=(props)=>{
+    function handleOnclick() {
+        window.location.replace(`/personshop?me=false&&id=${props.id}`);
+    }
+    function handleEmail(){
+        fetch('https://192.168.100.10/ideal_web/api/email.php', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                "ownerid": props.id,
+                "buyername": sessionStorage.getItem("userName"),
+                "buyeremail": sessionStorage.getItem("email"),
+                "buyercontact": sessionStorage.getItem("contactNumber"),
+                "itemname": props.title
+            })
+        })
+            .then((response) => response.json())
+            .catch((e)=> {
+                    console.log(e);
+                }
+            );
+    }
     return(
         <div className="card">
             <div className="card-body ">
                 <div className="author">
-                    <a href="/personshop">
-                        <img
-                            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=334&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-                            alt="..." className="avatar img-raised"/>
-                        <h3 style={inlineStyle}>Lord Alex</h3>
+                    <a onClick={handleOnclick}>
+                        <h3 style={inlineStyle}>{props.name}</h3>
                     </a>
                 </div>
             </div>
             <div className="card-footer ">
-                <a href="#0" className="btn btn-success" style={btnStyle}>Send buy Request</a>
+                <a onClick={handleEmail} className="btn btn-success text-white" style={btnStyle}>Send buy Request</a>
             </div>
 
         </div>

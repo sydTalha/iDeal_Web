@@ -32,7 +32,7 @@ class Home extends Component {
                 "ایک ایسی جگہ جہاں خریدار فروخت کنندگان سے ملتے ہیں۔",
                 "دکان تلاش کریں",
                 "کاروبار کی جگہ",
-                "ابھی جڑیں !"
+                "ابھی جڑیں!"
             ]
 
         }
@@ -56,9 +56,9 @@ class Home extends Component {
                             <div className="row">
                                 <div className='col'>
                                     <h1 className='text-dark'>{this.state.tagLineURDU[Math.floor(Math.random() * 5)]}</h1>
-                                    <a  role='button' className="btn btn-success" href={links['shops']}>&nbsp;Find Shop&nbsp;</a>
+                                    <a  role='button' className="btn btn-success" href={links['shops']}>{this.state.appDataURDU[1]}</a>
                                     <br/>
-                                    <a  className="btn btn-outline-success text-dark" href={links['signUp']}>Open Shop</a>
+                                    <a  className="btn btn-outline-success text-dark" href={links['signUp']}>{this.state.appDataURDU[2]}</a>
                                 </div>
                                 <div className='col-md-auto'>
                                     <Map/>
@@ -69,10 +69,10 @@ class Home extends Component {
                 </section>
                 <section className='section-div'>
                     <div className='container'>
-                        <h1 className='text-center font-weight-bold'>A place where Buyers meet Sellers
+                        <h1 className='text-center font-weight-bold'>{this.state.appDataURDU[0]}
                             <br/>
                         <a className='btn btn-success btn-round btn-link' data-toggle="modal" data-target="#loginModal">
-                            Connect Now !
+                            {this.state.appDataURDU[3]}
                         </a>
                         </h1>
                         <img src={background} style={backgroundStyle} alt=''/>

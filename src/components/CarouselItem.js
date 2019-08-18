@@ -2,24 +2,30 @@ import React from 'react';
 import {Component} from 'react';
 
 class CarouselItem extends Component{
+    constructor(props){
+        super(props);
+
+    }
     render() {
         return(
             <div>
+
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <div className="carousel-indicators">
-                        <img src="../../../assets/img/bg2.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
-                        <img src="../../../assets/img/bg3.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
-                        <img src="../../../assets/img/bg.jpg" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
+
+                        <img src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
+                        <img src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="1" />
+                        <img src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="img1" style={extraImgStyle} data-target="#carouselExampleIndicators" data-slide-to="2" />
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img className="d-block w-100" src="../../../assets/img/bg2.jpg" alt="First slide"/>
+                            <img className="d-block w-100" src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="First slide"/>
                         </div>
                         <div className="carousel-item">
-                            <img className="d-block w-100" src="../../../assets/img/bg3.jpg" alt="Second slide"/>
+                            <img className="d-block w-100" src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="Second slide"/>
                         </div>
                         <div className="carousel-item">
-                            <img className="d-block w-100" src="../../../assets/img/bg.jpg" alt="Third slide"/>
+                            <img className="d-block w-100" src="https://media.istockphoto.com/photos/medical-vital-signs-monitor-in-a-hospital-picture-id901063844?k=6&m=901063844&s=612x612&w=0&h=JsITw0UnNwPGEfUUij2wUQm6vEhBfg4XmGR0Jpt7bdA=" alt="Third slide"/>
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"

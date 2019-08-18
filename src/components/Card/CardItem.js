@@ -6,24 +6,30 @@ class CardItem extends Component{
     constructor(props){
         super(props);
         this.state={
+            id:props.id,
             title:props.title,
             image:props.image,
             time:props.timeCount,
             name:props.ownerName,
             picture:props.ownerPicture,
+            ownerId:props.ownerId,
             featured: false,
         };
-        CardItem.checkFeatured = CardItem.checkFeatured.bind(this);
-        CardItem.forward=CardItem.forward.bind(this);
+        this.checkFeatured = this.checkFeatured.bind(this);
+        this.forward=this.forward.bind(this);
     };
-    static forward(){
-        window.location.replace(`/detail?username=${this.state.name}&&title=${this.state.title}`);
+    forward(){
+        window.location.replace(`/detail?item=${this.state.id}&&owner=${this.state.ownerId}&&ownerName=${this.state.name}`);
     }
     componentDidMount() {
-        CardItem.checkFeatured();
+        this.checkFeatured();
+        this.setState({
+            url:this.props.url
+        })
+
     }
 
-    static checkFeatured() {
+    checkFeatured() {
         if(new Date().getTime() > this.state.time){
             this.setState({
                 featured: false,
@@ -43,11 +49,11 @@ class CardItem extends Component{
                 <div className="card-background" >
                     <div className='bg-dark'>
                         {
-                            this.state.featured===true ?
+                            this.state.time > (new Date().getTime()) ?
                                 (<div>
                                     <span className="badge badge-pill badge-warning" style={styleBadge}>Featured</span>
                                     <div style={styleCountdown}>
-                                        <CountdownVisual onComplete={CardItem.checkFeatured} time={this.state.time}/>
+                                        <CountdownVisual onComplete={this.checkFeatured} time={this.state.time}/>
                                     </div>
                                 </div>)
                                 :
@@ -65,12 +71,12 @@ class CardItem extends Component{
                 </div>
                 <div className="card-body">
                     <h4 className="card-title">
-                        <a onClick={CardItem.forward}>{this.state.title}</a>
+                        <a onClick={this.forward}>{this.state.title}</a>
                     </h4>
                 </div>
                 <div className='card-footer'>
                     <div className="author">
-                        <a href="/personshop">
+                        <a>
                             <img
                                 src={this.state.picture}
                                 alt="..." className="avatar img-raised"/>

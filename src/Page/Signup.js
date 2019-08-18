@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Alert from "../components/Alert/Alert";
 
 class Signup extends Component{
 
@@ -6,6 +7,7 @@ class Signup extends Component{
         super(props);
 
         this.state={
+            error:null,
             signUp: {
                 fname: '',
                 lname: '',
@@ -17,7 +19,8 @@ class Signup extends Component{
                 contactNumber: '',
                 inputState: '',
                 inputCity: '',
-                inputZip: ''
+                inputZip: '',
+                profilePic:''
             }
         };
         this.handleChange = this.handleChange.bind(this);
@@ -57,25 +60,36 @@ class Signup extends Component{
         || user.inputAddress === "" || user.contactNumber === "" || user.inputCity === "" || user.inputState === "" || user.inputZip === ""
         || user.uname === "" ){
 
-            console.log("fields empty");
+            this.setState({
+                error:'Fields are empty'
+            })
 
         }
         else{
 
             //sign up user
             if(user.inputPassword === user.inputConfirmPassword){
-                console.log("sending request");
-                fetch('http://localhost:8181/ideal_web/api/script.php?action=signup',{
+                user.profilePic=`https://robohash.org/${user.uname}.png`;
+                fetch('https://192.168.100.10/ideal_web/api/signup.php',{
                     method: 'post',
                     headers: {'Content-type': 'application/json'},
                     credentials: 'same-origin'  ,
                     body: JSON.stringify(user)
                 }).then((response)=>{
                    console.log(response.json());
-                });
+                    window.location.replace(`/home`);
+                })
+                    .catch(()=>{
+                        this.setState({
+                            error:'Unable to connect'
+                        });
+                        window.location.replace(`/home`);
+                    });
             }
             else{
-                console.log("passwords dont match");
+                this.setState({
+                    error:'passwords dont match'
+                });
             }
 
         }
@@ -85,6 +99,12 @@ class Signup extends Component{
 
         return (
             <div className='container'>
+                {
+                    this.state.error===null?
+                        <div/>
+                        :
+                        <Alert message={this.state.error}/>
+                }
                 <form id="form" method="POST" encType="multipart/form-data">
                     <div className="text-center">
                         <div className="thumbnail">
@@ -127,10 +147,11 @@ class Signup extends Component{
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label style={labelStyle} htmlFor="inputPassword4">Password</label>
-                            <input type="password" className="form-control" id="inputPassword" onChange={this.handleChange} placeholder="Password"
-                                   data-toggle="popover" data-container="body" data-color="primary" data-placement="bottom"
-                                   data-content="Password must have atleast one number.
-                                   minimum length can be of 8 character"/>
+                            <input type="password" className="form-control" id="inputPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                   onChange={this.handleChange} placeholder="Password"
+                                   data-toggle="tooltip" data-placement="top"
+                                   title="Password Must contain at least one number and one uppercase
+                                    and lowercase letter, and at least 8 or more characters"/>
                         </div>
                         <div className="form-group col-md-6">
                             <label style={labelStyle} htmlFor="inputPassword4">Confirm Password</label>
@@ -153,8 +174,14 @@ class Signup extends Component{
                             <label style={labelStyle} htmlFor="inputState">Province</label>
                             <select id="inputState" onChange={this.handleChange} className="form-control">
                                 <option selected>Choose...</option>
+                                <option>Balochistan</option>
+                                <option>Azad Kashmir</option>
+                                <option>F.C.T</option>
+                                <option>Northern Areas</option>
+                                <option>F.A.T.A</option>
                                 <option>Punjab</option>
-                                <option>K.P.K</option>
+                                <option>Sindh</option>
+                                <option>khyber Pakhtunkhwa</option>
                             </select>
                         </div>
                         <div className="form-group col-md-6">
